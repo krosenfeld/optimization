@@ -1,0 +1,27 @@
+About: 
+    IDL implementation of the affine-invariant sampler from Goodman and Weare.
+    Also includes some functions to inspect the results (see utils_sampler.pro).
+
+To use:
+    1) Create the function you wish to sample. 
+    2) set up sampler inputs (inputs.pro)
+    3) change gw10_sampler.pro to use your inputs.pro file 
+    4) call:
+            .r gw10_sampler.pro
+            gw10_sampler,e=e,i=i
+        e will contain the samples and i some metadata.
+
+Examples:
+    -- gaussian.pro, gaussian_inputs.pro
+            N-dimensional gaussian with random covariance matrix.
+            based off of the example described here:
+                http://dan.iel.fm/emcee/user/quickstart/#how-to-sample-a-multi-dimensional-gaussian
+    -- rosenbrock.pro, rosenbrock_inputs.pro
+            Rosenbrock function (see http://msp.org/camcos/2010/5-1/p04.xhtml)
+
+References:
+    -- http://msp.org/camcos/2010/5-1/p04.xhtml
+    -- http://dan.iel.fm/emcee/
+    -- http://www.math.nyu.edu/faculty/goodman/software/acor/
+
+Contact: Katherine Rosenfeld (krosenf@gmail.com)
